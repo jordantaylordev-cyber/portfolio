@@ -67,6 +67,25 @@ body {
   box-shadow: 0 0 0 4px rgba(6,182,212,0.08);
 }
 
+.timeline-bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.timeline-bullets li { margin-bottom: 0.35rem; }
+
+.bullet-highlight svg{ vertical-align:middle; color:var(--accent); }
+.bullet-highlight strong{ color:var(--text); }
+
+/* Collapsible bullets */
+.timeline-bullets.collapsed{ max-height: 0; overflow: hidden; transition: max-height 300ms ease; }
+.timeline-bullets.open{ max-height: 1000px; transition: max-height 400ms ease; }
+
+.timeline-toggle{ cursor: pointer; background:none; border:0; padding:0 }
+
+.timeline-toggle svg{ transition: transform 220ms ease; vertical-align:middle }
+.timeline-toggle.open svg{ transform: rotate(180deg) }
+.timeline-toggle:focus{ outline: 2px solid rgba(6,182,212,0.25); outline-offset: 2px }
+
 @media (max-width: 640px) {
   #timeline-list::before { left: 8px; }
   .timeline-item, .timeline-item-left, .timeline-item-right { width: 100%; left: 0; }
@@ -76,6 +95,23 @@ body {
 
 /* Resume button fallback spacing */
 #resume-download-btn { text-decoration: none; }
+
+/* Avatar placeholder and badges */
+.badge {
+  display: inline-block;
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.avatar-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #e6f7ff, #d1f0ff);
+}
 
 /* Ensure most text elements inherit the readable dark text color */
 h1, h2, h3, h4, h5, h6,
@@ -94,3 +130,21 @@ nav a, footer {
 input, textarea, select {
   color: var(--text);
 }
+
+/* Check icon for timeline bullets */
+.timeline-check {
+  color: var(--accent);
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+/* ensure svg inherits currentColor for stroke */
+.timeline-check path {
+  stroke: currentColor;
+}
+
+const checkSvg = `<svg class="timeline-check inline-block mr-2" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const listItems = bullets.map((b, bi) => {
+  const text = bi === 0 ? `<strong>${escapeHtml(b)}</strong>` : escapeHtml(b);
+  return `<li class="mb-1">${checkSvg}${text}</li>`;
+});
