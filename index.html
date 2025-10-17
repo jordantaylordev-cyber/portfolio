@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jordan Taylor — Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Optionally customize Tailwind tokens
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#6ee7b7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <meta name="description" content="Portfolio of a software engineer — projects, blog, contact." />
+</head>
+<body>
+  <header class="bg-transparent">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+  <h1 class="text-xl font-bold text-slate-900">Jordan Taylor</h1>
+      <nav class="space-x-4">
+        <a class="text-slate-700 hover:text-slate-900" href="#projects">Projects</a>
+        <a class="text-slate-700 hover:text-slate-900" href="#about">About</a>
+        <a class="text-slate-700 hover:text-slate-900" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6">
+    <section id="hero" class="py-12 text-center">
+  <h2 class="text-4xl font-extrabold text-slate-900">Hi — I'm <span id="hero-name">Jordan Taylor</span></h2>
+  <p id="hero-title" class="mt-3 text-lg text-slate-700">Software engineer building web apps and developer tools.</p>
+      <div class="mt-6">
+  <a class="inline-block px-4 py-2 bg-brand text-slate-900 rounded-lg font-medium mr-3" href="#projects">View projects</a>
+  <a class="inline-block px-4 py-2 border border-slate-300 text-slate-700 rounded-lg" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="projects" class="py-8">
+  <h3 class="text-2xl font-semibold text-slate-900 mb-4">Selected projects</h3>
+      <div id="projects-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+    </section>
+
+    <section id="about" class="py-8">
+  <h3 class="text-2xl font-semibold text-slate-900 mb-3">About</h3>
+  <p id="about-text" class="text-slate-700">Short bio goes here. Mention languages, frameworks, and strengths.</p>
+    </section>
+
+    <section id="contact" class="py-8">
+  <h3 class="text-2xl font-semibold text-slate-900 mb-3">Contact</h3>
+  <p class="text-slate-700 mb-4">Prefer email? Use the form below or mail me at <a class="text-brand" href="mailto:jordan.taylor.dev@gmail.com" id="contact-email">jordan.taylor.dev@gmail.com</a></p>
+
+      <!-- Simple form using Formspree (replace the action with your Formspree form ID) -->
+      <form class="max-w-xl" method="POST" action="https://formspree.io/f/{your-form-id}">
+  <label class="block text-slate-700 mb-1">Name</label>
+  <input name="name" class="w-full mb-3 rounded-md px-3 py-2 bg-white text-slate-900 border border-slate-300" required>
+
+  <label class="block text-slate-700 mb-1">Email</label>
+  <input name="email" type="email" class="w-full mb-3 rounded-md px-3 py-2 bg-white text-slate-900 border border-slate-300" required>
+
+  <label class="block text-slate-700 mb-1">Message</label>
+  <textarea name="message" rows="5" class="w-full mb-3 rounded-md px-3 py-2 bg-white text-slate-900 border border-slate-300" required></textarea>
+
+  <button type="submit" class="px-4 py-2 bg-brand text-slate-900 rounded-lg">Send message</button>
+      </form>
+
+  <p class="text-slate-700 mt-4">Or find me on GitHub: <a class="text-brand" href="https://github.com/your-username" id="contact-github">your-username</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Your Name — <span id="footer-role">Software Engineer</span></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

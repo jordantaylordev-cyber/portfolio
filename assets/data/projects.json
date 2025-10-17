@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Open-Source CLI Tool",
+    "stack": ["Go", "CLI", "GitHub Actions"],
+    "description": "A fast CLI to simplify X workflows. Includes tests and CI.",
+    "url": "https://github.com/your-username/cli-tool",
+  "image": "assets/images/cli-screenshot.svg"
+  },
+  {
+    "title": "React Dashboard",
+    "stack": ["TypeScript", "React", "Vite"],
+    "description": "A realtime dashboard with charts and role-based auth.",
+    "url": "https://github.com/your-username/react-dashboard",
+  "image": "assets/images/dashboard-thumb.svg"
+  }
+]
