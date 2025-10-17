@@ -25,6 +25,10 @@ Customizing:
 - Change styles in `assets/css/styles.css`.
  - Add project thumbnails to `assets/images/` and reference them in `assets/data/projects.json` using the `image` field (e.g. `assets/images/project1.png`). Thumbnails should be around 800×450 or 1200×675 for best results.
 
+- Timeline and resume
+- Add a career timeline in `assets/data/timeline.json` (example file included). Each item should have `start`, `end`, `title`, `company`, and `description` fields.
+- To show your resume on the site, add a PDF named `assets/resume.pdf`. The site will attempt to render it in an embedded preview with a download fallback.
+
 Formspree contact form
 - The included contact form posts to Formspree. Replace the action URL in `index.html` with your Formspree form endpoint (e.g. `https://formspree.io/f/mayvlkbr`).
 - Mailto fallback: this project includes a mailto fallback. If the Formspree action remains the placeholder, clicking "Send message" will open the visitor's default mail client with a prefilled email (name, email, message). This avoids third-party services but requires the visitor to have an email client configured.

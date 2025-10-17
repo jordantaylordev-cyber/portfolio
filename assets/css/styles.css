@@ -33,6 +33,50 @@ body {
   color: var(--muted);
 }
 
+/* Timeline styles: center line with alternating cards on wide screens */
+#timeline-list {
+  position: relative;
+}
+
+#timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(6,22,33,0.05), rgba(6,22,33,0.05));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: calc(50% - 2rem);
+}
+
+.timeline-item-left { left: 0; }
+.timeline-item-right { left: 50%; }
+
+.timeline-item .timeline-badge {
+  position: absolute;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(6,182,212,0.08);
+}
+
+@media (max-width: 640px) {
+  #timeline-list::before { left: 8px; }
+  .timeline-item, .timeline-item-left, .timeline-item-right { width: 100%; left: 0; }
+  .timeline-item { padding-left: 28px; }
+  .timeline-item .timeline-badge { left: 0; }
+}
+
+/* Resume button fallback spacing */
+#resume-download-btn { text-decoration: none; }
+
 /* Ensure most text elements inherit the readable dark text color */
 h1, h2, h3, h4, h5, h6,
 p, a, li, label, span, div, small,
