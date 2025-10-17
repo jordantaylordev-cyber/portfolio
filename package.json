@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "preview": "python -m http.server 8000",
+    "deploy": "echo Use GitHub Actions to deploy"
+  }
+}
