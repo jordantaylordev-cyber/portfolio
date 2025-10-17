@@ -1,23 +1,38 @@
 [
   {
-    "start": "2024-06",
+    "start": "Oct 2024",
     "end": "Present",
     "title": "Senior Software Engineer",
-    "company": "Acme Corp",
-    "description": "Working on platform reliability and developer experience."
+    "company": "Booz Allen Hamilton",
+    "description": "Working on platform reliability and developer experience.",
+    "bullets": [
+      "Improved platform reliability by introducing better observability and alerting",
+      "Led a migration to managed services to reduce operational overhead",
+      "Mentored junior engineers and improved onboarding documentation"
+    ]
   },
   {
     "start": "2021-09",
     "end": "2024-05",
     "title": "Software Engineer",
     "company": "Example Systems",
-    "description": "Built internal tools and public APIs; focused on performance."
+    "description": "Built internal tools and public APIs; focused on performance.",
+    "bullets": [
+      "Designed and implemented RESTful APIs consumed by external partners",
+      "Optimized database queries resulting in 30% lower latency",
+      "Automated CI pipelines with test coverage and deployment gating"
+    ]
   },
   {
     "start": "2019-07",
     "end": "2021-08",
     "title": "Junior Developer",
     "company": "Startup Co",
-    "description": "Frontend work and small full-stack features."
+    "description": "Frontend work and small full-stack features.",
+    "bullets": [
+      "Implemented responsive UI components in React",
+      "Integrated backend APIs and assisted in testing",
+      "Contributed to improving UX and accessibility"
+    ]
   }
 ]

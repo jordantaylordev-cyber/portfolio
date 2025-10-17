@@ -54,8 +54,47 @@
     </section>
 
     <section id="about" class="py-8">
-  <h3 class="text-2xl font-semibold text-slate-900 mb-3">About</h3>
-  <p id="about-text" class="text-slate-700">Short bio goes here. Mention languages, frameworks, and strengths.</p>
+      <h3 class="text-2xl font-semibold text-slate-900 mb-6">About</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <!-- Avatar / Quick facts -->
+        <div class="col-span-1 flex flex-col items-center md:items-start">
+          <img src="assets/images/avatar-placeholder.svg" alt="Jordan Taylor avatar" class="w-40 h-40 rounded-full shadow-md mb-4 object-cover">
+          <div class="text-center md:text-left">
+            <div class="text-lg font-semibold text-slate-900">Jordan Taylor</div>
+            <div class="text-sm text-slate-700">Software Engineer</div>
+            <a class="text-brand text-sm block mt-2" href="mailto:jordan.taylor.dev@gmail.com">jordan.taylor.dev@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Summary and skills -->
+        <div class="col-span-2">
+          <div class="p-6 bg-white rounded-md shadow-sm">
+            <p class="text-slate-700 mb-4" id="about-text">Software Engineer with experience building scalable AI/ML services and cloud-native applications using Kubernetes and Golang. Skilled in deploying machine learning models, building efficient APIs, and automating CI/CD workflows. Strong background in designing reusable libraries and internal tools to improve development efficiency and support enterprise-wide solutions.</p>
+
+            <div class="mb-4">
+              <div class="text-sm font-medium text-slate-900 mb-2">Core skills</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">Golang</span>
+                <span class="badge">Kubernetes</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Python</span>
+                <span class="badge">React</span>
+                <span class="badge">CI/CD</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-sm font-medium text-slate-900 mb-2">Highlights</div>
+              <ul class="list-disc list-inside text-slate-700">
+                <li>Designed a distributed job processing system reducing runtime by 40%.</li>
+                <li>Led migration of monolith to microservices with container-based deployments.</li>
+                <li>Authored an internal Go library used by multiple teams for service utilities.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="timeline" class="py-8">
